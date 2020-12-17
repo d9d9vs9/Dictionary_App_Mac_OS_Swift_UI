@@ -15,6 +15,15 @@
 		2238A284258BBD0C00BEC73E /* MyDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238A283258BBD0C00BEC73E /* MyDictionaryTests.swift */; };
 		2238A28F258BBD0C00BEC73E /* MyDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238A28E258BBD0C00BEC73E /* MyDictionaryUITests.swift */; };
 		22A81007258BC3CD009F1219 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A81006258BC3CD009F1219 /* main.swift */; };
+		22A81014258BC9A5009F1219 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A81013258BC9A5009F1219 /* RootView.swift */; };
+		22A8101B258BCA75009F1219 /* WordListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8101A258BCA75009F1219 /* WordListCell.swift */; };
+		22A81024258BCA93009F1219 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A81023258BCA93009F1219 /* WordModel.swift */; };
+		22A8102D258BCAD1009F1219 /* WordListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8102C258BCAD1009F1219 /* WordListModule.swift */; };
+		22A81036258BCB09009F1219 /* WordListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A81035258BCB09009F1219 /* WordListRouter.swift */; };
+		22A8103C258BCB76009F1219 /* WordListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8103B258BCB76009F1219 /* WordListInteractor.swift */; };
+		22A81042258BCBBA009F1219 /* WordListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A81041258BCBBA009F1219 /* WordListPresenter.swift */; };
+		22A81048258BCC45009F1219 /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A81047258BCC45009F1219 /* WordListView.swift */; };
+		22A81051258BCCBF009F1219 /* WordListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A81050258BCCBF009F1219 /* WordListDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +59,15 @@
 		2238A28E258BBD0C00BEC73E /* MyDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDictionaryUITests.swift; sourceTree = "<group>"; };
 		2238A290258BBD0C00BEC73E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22A81006258BC3CD009F1219 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		22A81013258BC9A5009F1219 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		22A8101A258BCA75009F1219 /* WordListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListCell.swift; sourceTree = "<group>"; };
+		22A81023258BCA93009F1219 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
+		22A8102C258BCAD1009F1219 /* WordListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListModule.swift; sourceTree = "<group>"; };
+		22A81035258BCB09009F1219 /* WordListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListRouter.swift; sourceTree = "<group>"; };
+		22A8103B258BCB76009F1219 /* WordListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListInteractor.swift; sourceTree = "<group>"; };
+		22A81041258BCBBA009F1219 /* WordListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListPresenter.swift; sourceTree = "<group>"; };
+		22A81047258BCC45009F1219 /* WordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListView.swift; sourceTree = "<group>"; };
+		22A81050258BCCBF009F1219 /* WordListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +118,9 @@
 		2238A269258BBD0900BEC73E /* MyDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				22A81022258BCA8C009F1219 /* Models */,
+				22A81011258BC967009F1219 /* Utilities */,
+				22A8100F258BC886009F1219 /* Modules */,
 				2238A2A5258BBDCF00BEC73E /* CoreData */,
 				2238A29F258BBD9500BEC73E /* Resources */,
 				2238A27A258BBD0B00BEC73E /* MyDictionary.entitlements */,
@@ -192,6 +213,116 @@
 				2238A26E258BBD0900BEC73E /* MyDictionary.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		22A8100F258BC886009F1219 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				22A81010258BC88E009F1219 /* WordList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		22A81010258BC88E009F1219 /* WordList */ = {
+			isa = PBXGroup;
+			children = (
+				22A81018258BCA3A009F1219 /* Cells */,
+				22A8102B258BCACB009F1219 /* Module */,
+				22A81034258BCB00009F1219 /* Router */,
+				22A8103A258BCB5F009F1219 /* Interactor */,
+				22A81040258BCBB0009F1219 /* Presenter */,
+				22A81046258BCC37009F1219 /* View */,
+				22A8104F258BCCB8009F1219 /* DataModel */,
+			);
+			path = WordList;
+			sourceTree = "<group>";
+		};
+		22A81011258BC967009F1219 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				22A81012258BC999009F1219 /* RootView */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		22A81012258BC999009F1219 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				22A81013258BC9A5009F1219 /* RootView.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		22A81018258BCA3A009F1219 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				22A81019258BCA61009F1219 /* WordListCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		22A81019258BCA61009F1219 /* WordListCell */ = {
+			isa = PBXGroup;
+			children = (
+				22A8101A258BCA75009F1219 /* WordListCell.swift */,
+			);
+			path = WordListCell;
+			sourceTree = "<group>";
+		};
+		22A81022258BCA8C009F1219 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22A81023258BCA93009F1219 /* WordModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		22A8102B258BCACB009F1219 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				22A8102C258BCAD1009F1219 /* WordListModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		22A81034258BCB00009F1219 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				22A81035258BCB09009F1219 /* WordListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		22A8103A258BCB5F009F1219 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				22A8103B258BCB76009F1219 /* WordListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		22A81040258BCBB0009F1219 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				22A81041258BCBBA009F1219 /* WordListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		22A81046258BCC37009F1219 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22A81047258BCC45009F1219 /* WordListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22A8104F258BCCB8009F1219 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				22A81050258BCCBF009F1219 /* WordListDataModel.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,8 +456,17 @@
 			files = (
 				2238A26D258BBD0900BEC73E /* ContentView.swift in Sources */,
 				2238A270258BBD0900BEC73E /* MyDictionary.xcdatamodeld in Sources */,
+				22A81036258BCB09009F1219 /* WordListRouter.swift in Sources */,
 				22A81007258BC3CD009F1219 /* main.swift in Sources */,
+				22A81048258BCC45009F1219 /* WordListView.swift in Sources */,
+				22A8103C258BCB76009F1219 /* WordListInteractor.swift in Sources */,
+				22A8101B258BCA75009F1219 /* WordListCell.swift in Sources */,
+				22A81051258BCCBF009F1219 /* WordListDataModel.swift in Sources */,
 				2238A26B258BBD0900BEC73E /* AppDelegate.swift in Sources */,
+				22A8102D258BCAD1009F1219 /* WordListModule.swift in Sources */,
+				22A81024258BCA93009F1219 /* WordModel.swift in Sources */,
+				22A81042258BCBBA009F1219 /* WordListPresenter.swift in Sources */,
+				22A81014258BC9A5009F1219 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

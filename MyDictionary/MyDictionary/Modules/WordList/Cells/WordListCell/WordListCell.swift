@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  WordListCell.swift
 //  MyDictionary
 //
 //  Created by Дмитрий Чумаков on 17.12.2020.
@@ -7,8 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WordListCell: View {
+    
+    @ObservedObject var model: WordModel
+    
     var body: some View {
-        return RootView.view
+        Text(model.word)
     }
+    
 }
