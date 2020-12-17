@@ -12,9 +12,9 @@
 		2238A270258BBD0900BEC73E /* MyDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2238A26E258BBD0900BEC73E /* MyDictionary.xcdatamodeld */; };
 		2238A272258BBD0B00BEC73E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2238A271258BBD0B00BEC73E /* Assets.xcassets */; };
 		2238A275258BBD0B00BEC73E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2238A274258BBD0B00BEC73E /* Preview Assets.xcassets */; };
-		2238A278258BBD0B00BEC73E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2238A276258BBD0B00BEC73E /* Main.storyboard */; };
 		2238A284258BBD0C00BEC73E /* MyDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238A283258BBD0C00BEC73E /* MyDictionaryTests.swift */; };
 		2238A28F258BBD0C00BEC73E /* MyDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2238A28E258BBD0C00BEC73E /* MyDictionaryUITests.swift */; };
+		22A81007258BC3CD009F1219 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A81006258BC3CD009F1219 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		2238A26F258BBD0900BEC73E /* MyDictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDictionary.xcdatamodel; sourceTree = "<group>"; };
 		2238A271258BBD0B00BEC73E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2238A274258BBD0B00BEC73E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2238A277258BBD0B00BEC73E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2238A279258BBD0B00BEC73E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2238A27A258BBD0B00BEC73E /* MyDictionary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyDictionary.entitlements; sourceTree = "<group>"; };
 		2238A27F258BBD0C00BEC73E /* MyDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +49,7 @@
 		2238A28A258BBD0C00BEC73E /* MyDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2238A28E258BBD0C00BEC73E /* MyDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDictionaryUITests.swift; sourceTree = "<group>"; };
 		2238A290258BBD0C00BEC73E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A81006258BC3CD009F1219 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,14 +100,11 @@
 		2238A269258BBD0900BEC73E /* MyDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				2238A26A258BBD0900BEC73E /* AppDelegate.swift */,
-				2238A26C258BBD0900BEC73E /* ContentView.swift */,
-				2238A271258BBD0B00BEC73E /* Assets.xcassets */,
-				2238A276258BBD0B00BEC73E /* Main.storyboard */,
-				2238A279258BBD0B00BEC73E /* Info.plist */,
+				2238A2A5258BBDCF00BEC73E /* CoreData */,
+				2238A29F258BBD9500BEC73E /* Resources */,
 				2238A27A258BBD0B00BEC73E /* MyDictionary.entitlements */,
-				2238A26E258BBD0900BEC73E /* MyDictionary.xcdatamodeld */,
 				2238A273258BBD0B00BEC73E /* Preview Content */,
+				22A81006258BC3CD009F1219 /* main.swift */,
 			);
 			path = MyDictionary;
 			sourceTree = "<group>";
@@ -136,6 +133,65 @@
 				2238A290258BBD0C00BEC73E /* Info.plist */,
 			);
 			path = MyDictionaryUITests;
+			sourceTree = "<group>";
+		};
+		2238A29F258BBD9500BEC73E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2238A2A4258BBDC700BEC73E /* InfoPlist */,
+				2238A2A2258BBDAA00BEC73E /* Assets */,
+				2238A2A1258BBDA100BEC73E /* ContentView */,
+				2238A2A0258BBD9D00BEC73E /* AppDelegate */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2238A2A0258BBD9D00BEC73E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2238A26A258BBD0900BEC73E /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2238A2A1258BBDA100BEC73E /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				2238A26C258BBD0900BEC73E /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		2238A2A2258BBDAA00BEC73E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2238A271258BBD0B00BEC73E /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		2238A2A4258BBDC700BEC73E /* InfoPlist */ = {
+			isa = PBXGroup;
+			children = (
+				2238A279258BBD0B00BEC73E /* Info.plist */,
+			);
+			path = InfoPlist;
+			sourceTree = "<group>";
+		};
+		2238A2A5258BBDCF00BEC73E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2238A2A6258BBDD300BEC73E /* Model */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		2238A2A6258BBDD300BEC73E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2238A26E258BBD0900BEC73E /* MyDictionary.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +297,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2238A278258BBD0B00BEC73E /* Main.storyboard in Resources */,
 				2238A275258BBD0B00BEC73E /* Preview Assets.xcassets in Resources */,
 				2238A272258BBD0B00BEC73E /* Assets.xcassets in Resources */,
 			);
@@ -270,6 +325,7 @@
 			files = (
 				2238A26D258BBD0900BEC73E /* ContentView.swift in Sources */,
 				2238A270258BBD0900BEC73E /* MyDictionary.xcdatamodeld in Sources */,
+				22A81007258BC3CD009F1219 /* main.swift in Sources */,
 				2238A26B258BBD0900BEC73E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,17 +360,6 @@
 			targetProxy = 2238A28B258BBD0C00BEC73E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2238A276258BBD0B00BEC73E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2238A277258BBD0B00BEC73E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2238A291258BBD0C00BEC73E /* Debug */ = {
@@ -444,7 +489,7 @@
 				DEVELOPMENT_TEAM = URMC99RRR3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MyDictionary/Info.plist;
+				INFOPLIST_FILE = MyDictionary/Resources/InfoPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -468,7 +513,7 @@
 				DEVELOPMENT_TEAM = URMC99RRR3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MyDictionary/Info.plist;
+				INFOPLIST_FILE = MyDictionary/Resources/InfoPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
